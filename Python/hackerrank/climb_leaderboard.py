@@ -15,5 +15,13 @@ So return [4,3,1]
 # Problem Solution
 def climbingLeaderboard(ranked, player_scores):
     # Write your code here
+    scores=sorted(set(ranked),reverse=True)
+    index=len(player_scores)-1
+    answer=[]
+    for i in player:
+        while(index>=0 and i>=player_scores[index]):
+            index-=1
+        answer.append(index+2)
+    return answer
 
 climbingLeaderboard([100, 90, 90, 80], [70, 80, 105])
