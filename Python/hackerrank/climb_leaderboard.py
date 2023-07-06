@@ -16,10 +16,10 @@ So return [4,3,1]
 def climbingLeaderboard(ranked, player_scores):
     # Write your code here
     scores=sorted(set(ranked),reverse=True)
-    index=len(player_scores)-1
+    index=len(scores)-1
     answer=[]
-    for i in player:
-        while(index>=0 and i>=player_scores[index]):
+    for i in player_scores:
+        while(index>=0 and i>=scores[index]):
             index-=1
         answer.append(index+2)
     return answer
